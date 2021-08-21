@@ -1,0 +1,389 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+.title {
+    position: relative;
+    color: #000;
+    z-index: 20;
+    margin: 0 auto;
+    text-align: center;
+    font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+}
+
+.intro {
+    position: relative;
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    overflow: hidden;
+    min-height: 100vh;
+    
+    &__title {
+        color: #fff;
+    }
+    &-body__img {
+        display: flex;
+        align-items: center;
+    }
+    &__video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-body {
+        position: relative;
+        z-index: 20;
+        margin-top: 100px;
+    }
+    &-body__list {
+        list-style-type:decimal;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            color: #fff;
+            font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+    &__btn {
+        display: block;
+        width: 200px;
+        height: 60px;
+        position: relative;
+        z-index: 20;
+        margin: 0 auto;
+        margin-top: 50px;
+        border: none;
+        background-color:purple;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        color: #fff;
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.ingredients {
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    position: relative;
+    z-index: 20;
+    background: linear-gradient( pink, blue);
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .25);
+        z-index: 21;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 22;
+        align-items: center;
+        height: 100%;
+        margin-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        li {
+            list-style-type: none;
+        }
+    }
+    &-list__item {
+        margin-bottom: 30px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #000;
+        border-radius: 7px;
+        box-shadow: 0px 24px 80px rgb(0 0 0 / 10%);
+        &:nth-child(3n) {
+            margin-bottom: 0;
+        }
+        &-text {
+            text-align: center;
+            font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 300;
+            color: #fff;
+            margin-top: 15px;
+        }
+    }
+    &__bg {
+        position: relative;
+        background: linear-gradient(yellow, pink);
+        border-radius: 100%;
+        height: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
+        width: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
+        padding: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 200px;
+        height: 60px;
+        border: none;
+        background-color:purple;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        color: #fff;
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.reviews {
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    position: relative;
+    z-index: 20;
+    background: linear-gradient(orange, yellow);
+    &-user {
+        padding-left: 15px;
+        &__name {
+            font-weight: 700;
+            font-size:  calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+        &__review {
+            font-weight: 300;
+            font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+            margin-top: 15px;
+        }
+    }
+    &-slider {
+        margin-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        overflow: hidden;
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            transition: .5s;
+            overflow: hidden;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            min-height: 200px;
+        }
+        &__img {
+            overflow: hidden;
+            height: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
+            width: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320)));
+            border-radius: 100%;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__dots {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &__dot {
+            margin-right:10px;
+            border: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            background-color: #fff;
+            border: 1px solid blue;
+        }
+    }
+}
+
+.promo {
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    position: relative;
+    z-index: 20;
+    background: linear-gradient(rgb(255, 73, 255), white);
+    &-characteristics {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        &__item {
+            list-style-type: decimal;
+            font-size: calc(12px + (25 - 12) * ((100vw - 320px) / (1920 - 320)));
+            border-bottom: 1px solid rgb(119, 119, 119);
+        }
+    }
+    &__wrapper {
+        margin-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+    }
+    &__descr {
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 300;
+        box-shadow: 0px 24px 80px rgb(0 0 0 / 10%);
+        padding: 15px;
+    }
+    &__img {
+        box-shadow: 0px 24px 80px rgb(0 0 0 / 10%);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+.order {
+    padding: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320))) 0;
+    position: relative;
+    z-index: 20;
+    background: linear-gradient(gray, rgb(128, 128, 128));
+    color: #fff;
+    &__img {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        color: #fff;
+    }
+    &__timer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+        &-text {
+            margin-top: 20px;
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        &-styles {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 15px;
+        }
+        #hours, #minutes, #seconds {
+            padding: 10px;
+            border: 1px solid rgb(8, 8, 255);
+        }
+    }
+    &__wrapper {
+        margin-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-price {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+        }
+
+        &__old {
+            font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+            text-decoration: line-through;
+            text-decoration-color: #000;
+        }
+        &__new {
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+            animation: pulse ease-in 1s infinite;
+            animation-direction: alternate-reverse;
+            
+        }
+    }
+    &-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 100px;
+        border: 3px solid blue;
+        border-radius: 7px;
+        box-shadow: 0px 24px 80px rgb(0 0 0 / 10%);
+        
+
+        &__prompt {
+            position: absolute;
+            top: 0px;
+            right: 5px;
+            color: red;
+            z-index: 20;
+            display: none;
+        }
+        &__text {
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom: 30px;
+        }
+        &__item{
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+        }
+        input {
+            padding: 15px;
+            height: 60px;
+            width: 100%;
+            border: 1px solid rgb(8, 8, 255);
+            border-radius: 3px;
+        }
+
+        button {
+            height: 60px;
+            width: 70%;
+            margin-top: 70px;
+            border: none;
+            background-color:purple;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            color: #fff;
+            font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@import './media.scss';
